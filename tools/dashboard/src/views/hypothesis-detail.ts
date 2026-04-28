@@ -33,6 +33,8 @@ export function computeHypothesisDetail(
       ].filter(g => g.target.toLowerCase().includes(id.toLowerCase()))
     : undefined;
 
+  const vp = id === 'valueProposition' ? (h as import('../model/types').ValueProposition) : undefined;
+
   return {
     id,
     label: LABELS[id] ?? id,
@@ -48,6 +50,8 @@ export function computeHypothesisDetail(
     lastUpdated: h.lastUpdated,
     updateRationale: h.updateRationale,
     observableFilters: (h as any).observableCharacteristics,
+    jobs: vp?.jobs,
+    clauseValidation: vp?.clauseValidation,
     relatedGaps: relatedGaps && relatedGaps.length > 0 ? relatedGaps : undefined,
   };
 }
