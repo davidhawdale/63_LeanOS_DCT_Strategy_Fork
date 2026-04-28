@@ -876,7 +876,7 @@ export interface HypothesisDetailView {
     consideredCount: number;
     eliminatedCount: number;
     carriedCount: number;
-    entries: string[];
+    entries: { status: string; description: string }[];
     eliminations: EliminationEntry[];
     carried: string[];
   };
