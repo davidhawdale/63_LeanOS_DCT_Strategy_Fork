@@ -898,7 +898,7 @@ export interface HypothesisDetailView {
   triggerEvent?: string;
   budgetOwner?: string;
   currentSpend?: string;
-  observableCharacteristics?: string[];
+  observableFilters?: string[];
   accessPaths?: string[];
 
   // Unit Economics specific

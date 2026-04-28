@@ -47,6 +47,7 @@ export function computeHypothesisDetail(
     killCondition: (h as any).killCondition,
     lastUpdated: h.lastUpdated,
     updateRationale: h.updateRationale,
+    observableFilters: (h as any).observableCharacteristics,
     relatedGaps: relatedGaps && relatedGaps.length > 0 ? relatedGaps : undefined,
   };
 }
